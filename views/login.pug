@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  div(class="mainForm")
+    h2(class="formHeading") Login
+    form(action="/login" method="POST")
+      label(for="name") Name:
+      input(
+        type="text"
+        id="name"
+        name="name"
+        required="true"
+      )
+      br
+      label(for="password") Password:
+      input(
+        type="password"
+        id="password"
+        name="password"
+        required="true"
+      )
+      br
+      input(type="submit" value="Login")
+    a(href="/register" class="regHere") Don't have an account? register here

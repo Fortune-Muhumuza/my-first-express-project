@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(class="homeMainContainer")
+    h2 Tweets
+
+    a(href="/tweet") new tweet
+
+    ul
+
+      each tweet in tweets
+        - var content = tweet.tweet
+        - var author = tweet.author
+        - var path = "/status/" + tweet._id
+        li 
+          a(href=path)= content

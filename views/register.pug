@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div(class="mainForm")
+    h2(class="formHeading") Sign up
+    form(action="/register" method="POST")
+      label(for="name") Name:
+      input(
+        type="text"
+        id="name"
+        name="name"
+        required="true"
+      )
+      br
+      label(for="password") Password:
+      input(
+        type="password"
+        id="password"
+        name="password"
+        required="true"
+      )
+      br
+      input(type="submit" value="Sign up")
+    a(href="/login" class="regHere") Already have an account? login here

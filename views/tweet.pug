@@ -1,0 +1,8 @@
+extends layout
+
+block content 
+  br
+  form(action="/tweet", method="POST")
+    input(name="tweet" placeholder="Tweet something!")
+
+    input(type="submit" value="Tweet")
